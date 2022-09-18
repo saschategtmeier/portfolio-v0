@@ -1,10 +1,14 @@
 import { FC } from 'react';
-import { Container } from './container';
+
+import { Container } from '.';
+import { useHeaderStore } from '../state';
 
 export const Header: FC = () => {
+  const { currentHeader } = useHeaderStore();
+
   return (
     <Container className='fixed top-8 left-1/2 flex -translate-x-1/2 justify-between'>
-      <div>header</div>
+      <h1>{currentHeader}</h1>
       <div>nav</div>
       <div>logo</div>
     </Container>

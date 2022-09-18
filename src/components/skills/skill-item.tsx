@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { SkillLevelBar, SkillTag } from '.';
-import { Skill } from '../models';
+import { Skill } from '../../models';
 
 type SkillItemProps = {
   skill: Skill;

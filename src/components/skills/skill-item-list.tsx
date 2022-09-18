@@ -1,7 +1,7 @@
 import { FC, HTMLAttributes } from 'react';
 
 import { SkillItem } from '.';
-import { SkillCollection } from '../models';
+import { SkillCollection } from '../../models';
 
 type SkillItemListProps = {
   skillCollection?: SkillCollection;

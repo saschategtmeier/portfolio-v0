@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
-import { ContentSection, SkillItemList } from '.';
-import { useSkillsStore } from '../state';
+import { ContentSection, SkillItemList } from '..';
+import { useSkillsStore } from '../../state';
 
 export const BackendSkillsSection: FC = () => {
   const { backendSkills } = useSkillsStore();

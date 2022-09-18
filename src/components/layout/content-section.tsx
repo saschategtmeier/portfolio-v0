@@ -9,7 +9,7 @@ import {
 import { useIntersection } from 'react-use';
 
 import { Container } from '.';
-import { useHeaderStore } from '../state';
+import { useHeaderStore } from '../../state';
 
 type ContentSectionProps = {
   title?: string;

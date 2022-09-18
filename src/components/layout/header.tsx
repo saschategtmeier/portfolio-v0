@@ -1,7 +1,7 @@
 import { FC } from 'react';
 
 import { Container } from '.';
-import { useHeaderStore } from '../state';
+import { useHeaderStore } from '../../state';
 
 export const Header: FC = () => {
   const { currentHeader } = useHeaderStore();

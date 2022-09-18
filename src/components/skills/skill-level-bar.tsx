@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from 'react';
-import { SkillLevel } from '../enums';
+import { SkillLevel } from '../../enums';
 
 type SkillLevelBarProps = {
   level: SkillLevel;

@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { ContentSection } from './content-section';
+
+import { ContentSection } from '..';
 
 export const HeroSection: FC = () => {
   return (

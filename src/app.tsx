@@ -1,6 +1,6 @@
 import { FC, useEffect } from 'react';
 
-import skills from './assets/json/skills.json';
+import skills from './skills.json';
 import {
   BackendSkillsSection,
   FrontendSkillsSection,

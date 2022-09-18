@@ -8,7 +8,10 @@ export const FrontendSkillsSection: FC = () => {
 
   return (
     <ContentSection id='frontend-skills' title='Frontend Skills'>
-      <SkillItemList className='col-start-2' skillCollection={frontendSkills} />
+      <SkillItemList
+        className='desktop:col-start-2'
+        skillCollection={frontendSkills}
+      />
     </ContentSection>
   );
 };

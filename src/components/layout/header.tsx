@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
+import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
+
 import { Container } from '.';
 import { useHeaderStore } from '../../state';
 
@@ -9,13 +11,16 @@ export const Header: FC = () => {
   return (
     <Container className='fixed top-4 left-1/2 z-50 -translate-x-1/2'>
       <div className='relative flex items-center justify-between'>
-        <h1 className='h-10'>{currentHeader}</h1>
-        <nav className='absolute left-1/2 flex -translate-x-1/2 gap-4'>
-          <a href=''>Frontend</a>
-          <a href=''>Backend</a>
-          <a href=''>Tools & Knowledge</a>
-        </nav>
-        <div className='text-2xl font-bold'>Sascha Tegtmeier</div>
+        <h1>{currentHeader}</h1>
+        <div className='absolute left-1/2 -translate-x-1/2'>
+          <EllipsisHorizontalIcon className='h-12 w-12' />
+          <nav className='hidden gap-4 desktop:flex'>
+            <a href=''>Frontend</a>
+            <a href=''>Backend</a>
+            <a href=''>Tools & Knowledge</a>
+          </nav>
+        </div>
+        <div className='text-2xl font-bold'>ST</div>
       </div>
     </Container>
   );

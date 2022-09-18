@@ -26,7 +26,7 @@ export const ContentSection: FC<ContentSectionProps> = ({
 }) => {
   const { setHeader } = useHeaderStore();
   const ref = useRef<HTMLDivElement>(null!);
-  const intersection = useIntersection(ref, { threshold: 0.8 });
+  const intersection = useIntersection(ref, { threshold: 0.6 });
 
   useEffect(() => {
     if (!!intersection?.isIntersecting) {
@@ -41,7 +41,7 @@ export const ContentSection: FC<ContentSectionProps> = ({
       id={id}
     >
       <Container
-        className={`grid flex-1 grid-cols-2 items-center gap-32 ${containerClassName}`}
+        className={`grid flex-1 grid-cols-1 items-center gap-16 desktop:grid-cols-2 desktop:gap-32 ${containerClassName}`}
       >
         {children}
       </Container>

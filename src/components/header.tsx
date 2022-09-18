@@ -13,6 +13,7 @@ export const Header: FC = () => {
         <nav className='absolute left-1/2 flex -translate-x-1/2 gap-4'>
           <a href=''>Frontend</a>
           <a href=''>Backend</a>
+          <a href=''>Tools & Knowledge</a>
         </nav>
         <div className='text-2xl font-bold'>Sascha Tegtmeier</div>
       </div>

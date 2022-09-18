@@ -7,11 +7,7 @@ export const BackendSkillsSection: FC = () => {
   const { backendSkills } = useSkillsStore();
 
   return (
-    <ContentSection
-      id='backend-skills'
-      title='Backend Skills'
-      className='bg-blue-200'
-    >
+    <ContentSection id='backend-skills' title='Backend Skills'>
       <SkillItemList skillCollection={backendSkills} />
     </ContentSection>
   );

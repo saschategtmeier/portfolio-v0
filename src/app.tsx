@@ -3,10 +3,10 @@ import { FC, useEffect } from 'react';
 import skills from './assets/json/skills.json';
 import {
   BackendSkillsSection,
-  ContentSection,
   FrontendSkillsSection,
   Header,
   HeroSection,
+  ToolsAndKnowledgeSection,
 } from './components';
 import { useSkillsStore } from './state';
 
@@ -23,6 +23,7 @@ export const App: FC = () => {
       <HeroSection />
       <FrontendSkillsSection />
       <BackendSkillsSection />
+      <ToolsAndKnowledgeSection />
     </>
   );
 };

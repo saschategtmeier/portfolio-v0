@@ -3,9 +3,64 @@
     "category": 0,
     "skills": [
       {
-        "name": "Test skill",
+        "name": "Angular",
+        "level": 4,
+        "tags": []
+      },
+      {
+        "name": "Javascript && Typescript",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "CSS && Sass",
         "level": 2,
-        "tags": ["hi", "tags"]
+        "tags": []
+      },
+      {
+        "name": "Data Transport Structures",
+        "level": 4,
+        "tags": ["JSON", "XML", "YAML"]
+      },
+      {
+        "name": "Markup Languages",
+        "level": 4,
+        "tags": ["HTML", "Markdown"]
+      },
+      {
+        "name": "Testing",
+        "level": 2,
+        "tags": ["Jest", "Jasmine", "Vitest"]
+      },
+      {
+        "name": "Bundlers",
+        "level": 2,
+        "tags": ["Vite", "Webpack"]
+      },
+      {
+        "name": "RxJs",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "React",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Three.js",
+        "level": 2,
+        "tags": ["3D", "React Three Fiber", "Shaders"]
+      },
+      {
+        "name": "Redux Pattern",
+        "level": 3,
+        "tags": ["NgRx", "NgRx Entity", "Zustand"]
+      },
+      {
+        "name": "UI Libraries",
+        "level": 3,
+        "tags": ["Kendo UI", "Material UI", "Headless UI"]
       }
     ]
   },
@@ -13,9 +68,114 @@
     "category": 1,
     "skills": [
       {
-        "name": "Test skill backedn",
+        "name": ".NET 6.0+ && .NET Core && .NET",
+        "level": 4,
+        "tags": []
+      },
+      {
+        "name": "API's",
+        "level": 4,
+        "tags": ["REST", "CRUD"]
+      },
+      {
+        "name": "DataAccess / ORM",
+        "level": 4,
+        "tags": ["Entity Framework", "Dapper", "MongoDB Client"]
+      },
+      {
+        "name": "Worker Services",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "Sockets",
+        "level": 1,
+        "tags": ["SignalR"]
+      },
+      {
+        "name": "Databases",
+        "level": 3,
+        "tags": ["SQL", "Microsoft SQL", "noSQL", "MongoDB"]
+      }
+    ]
+  },
+  {
+    "category": 2,
+    "skills": [
+      {
+        "name": "Git",
         "level": 2,
-        "tags": ["hi", "tags"]
+        "tags": []
+      },
+      {
+        "name": "Shell",
+        "level": 2,
+        "tags": ["Bash"]
+      },
+      {
+        "name": "CI/CD",
+        "level": 1,
+        "tags": ["YAML Pipelines", "TeamCity", "Vercel"]
+      },
+      {
+        "name": "Docker",
+        "level": 1,
+        "tags": []
+      },
+      {
+        "name": "Scrum/Agile",
+        "level": 2,
+        "tags": ["Jira", "TeamCity"]
+      }
+    ]
+  },
+  {
+    "category": 3,
+    "skills": [
+      {
+        "name": "Dependency Injection / IoC Containers",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "SOLID Principles",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Design Patterns",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Testing",
+        "level": 2,
+        "tags": []
+      }
+    ]
+  },
+  {
+    "category": 4,
+    "skills": [
+      {
+        "name": "Figma",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Photoshop",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Storybook",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "Design Systems",
+        "level": 3,
+        "tags": ["Atomic Design"]
       }
     ]
   }

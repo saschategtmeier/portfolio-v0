@@ -32,7 +32,7 @@ export const SkillLevelBar: FC<SkillLevelBarProps> = ({ level }) => {
   }, []);
 
   return (
-    <div className='relative h-[2rem] rounded-full bg-slate-200 py-1 shadow'>
+    <div className='relative h-[2rem] rounded-full bg-slate-200/50 py-1 shadow backdrop-blur-sm'>
       <div
         className={`absolute top-0 left-0 h-[2rem] rounded-full bg-gradient-to-r from-blue-500 to-blue-700 py-1 px-4 text-white ${barWidth}`}
       ></div>

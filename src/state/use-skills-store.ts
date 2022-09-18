@@ -6,12 +6,18 @@ import { SkillCollection } from '../models';
 type SkillsState = {
   frontendSkills: SkillCollection | undefined;
   backendSkills: SkillCollection | undefined;
+  tools: SkillCollection | undefined;
+  knowledge: SkillCollection | undefined;
+  uiUxSkills: SkillCollection | undefined;
   setSkills: (skillsCollections: SkillCollection[]) => void;
 };
 
 export const useSkillsStore = create<SkillsState>((set) => ({
   frontendSkills: undefined,
   backendSkills: undefined,
+  tools: undefined,
+  knowledge: undefined,
+  uiUxSkills: undefined,
   setSkills: (skillsCollections) =>
     set((state) => ({
       ...state,
@@ -23,6 +29,9 @@ export const useSkillsStore = create<SkillsState>((set) => ({
         skillsCollections,
         SkillCategory.Backend
       ),
+      tools: findSkillCategory(skillsCollections, SkillCategory.Tools),
+      knowledge: findSkillCategory(skillsCollections, SkillCategory.Knowledge),
+      uiUxSkills: findSkillCategory(skillsCollections, SkillCategory.UiUx),
     })),
 }));
 

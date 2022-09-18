@@ -6,7 +6,7 @@ type SkillTagProps = {
 
 export const SkillTag: FC<SkillTagProps> = ({ tag }) => {
   return (
-    <span className='rounded-md bg-slate-200 px-2 py-1 text-sm shadow-sm'>
+    <span className='rounded-md bg-slate-200/50 px-2 py-1 text-sm shadow-sm backdrop-blur-sm'>
       {tag}
     </span>
   );

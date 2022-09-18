@@ -21,23 +21,30 @@ export const useSkillsStore = create<SkillsState>((set) => ({
   setSkills: (skillsCollections) =>
     set((state) => ({
       ...state,
-      frontendSkills: findSkillCategory(
+      frontendSkills: getSkillCategory(
         skillsCollections,
         SkillCategory.Frontend
       ),
-      backendSkills: findSkillCategory(
-        skillsCollections,
-        SkillCategory.Backend
-      ),
-      tools: findSkillCategory(skillsCollections, SkillCategory.Tools),
-      knowledge: findSkillCategory(skillsCollections, SkillCategory.Knowledge),
-      uiUxSkills: findSkillCategory(skillsCollections, SkillCategory.UiUx),
+      backendSkills: getSkillCategory(skillsCollections, SkillCategory.Backend),
+      tools: getSkillCategory(skillsCollections, SkillCategory.Tools),
+      knowledge: getSkillCategory(skillsCollections, SkillCategory.Knowledge),
+      uiUxSkills: getSkillCategory(skillsCollections, SkillCategory.UiUx),
     })),
 }));
 
-function findSkillCategory(
+function getSkillCategory(
   collections: SkillCollection[],
   category: SkillCategory
 ): SkillCollection | undefined {
-  return collections.find((collection) => collection.category === category);
+  const collection = collections.find(
+    (collection) => collection.category === category
+  );
+
+  if (!collection) {
+    return undefined;
+  }
+
+  collection.skills.sort((a, b) => b.level - a.level);
+
+  return collection;
 }

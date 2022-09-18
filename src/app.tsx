@@ -1,13 +1,28 @@
-import { FC } from 'react';
-import { ContentSection, Header } from './components';
+import { FC, useEffect } from 'react';
+
+import skills from './assets/json/skills.json';
+import {
+  BackendSkillsSection,
+  ContentSection,
+  FrontendSkillsSection,
+  Header,
+  HeroSection,
+} from './components';
+import { useSkillsStore } from './state';
 
 export const App: FC = () => {
+  const { setSkills } = useSkillsStore();
+
+  useEffect(() => {
+    setSkills(skills);
+  }, []);
+
   return (
     <>
       <Header />
-      <ContentSection title='Section One'>section one</ContentSection>
-      <ContentSection title='Section Two'>section two</ContentSection>
-      <ContentSection title='Section Three'>section three</ContentSection>
+      <HeroSection />
+      <FrontendSkillsSection />
+      <BackendSkillsSection />
     </>
   );
 };

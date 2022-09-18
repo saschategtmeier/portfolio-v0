@@ -1,0 +1,22 @@
+[
+  {
+    "category": 0,
+    "skills": [
+      {
+        "name": "Test skill",
+        "level": 2,
+        "tags": ["hi", "tags"]
+      }
+    ]
+  },
+  {
+    "category": 1,
+    "skills": [
+      {
+        "name": "Test skill backedn",
+        "level": 2,
+        "tags": ["hi", "tags"]
+      }
+    ]
+  }
+]

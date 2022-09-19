@@ -14,8 +14,10 @@ export const SkillItemList: FC<SkillItemListProps> = ({
   className,
 }) => {
   return (
-    <div className={`flex flex-col gap-6 ${className}`}>
-      <div className='text-xl font-bold'>{title}</div>
+    <div
+      className={`flex flex-col gap-6 tablet:gap-8 desktop:gap-10 ${className}`}
+    >
+      {title && <h2>{title}</h2>}
       {skillCollection?.skills.map((skill, index) => (
         <SkillItem key={index} skill={skill} />
       ))}

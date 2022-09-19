@@ -36,12 +36,12 @@ export const ContentSection: FC<ContentSectionProps> = ({
 
   return (
     <div
-      className={`flex min-h-screen w-full flex-col pt-32 pb-8 ${className}`}
+      className={`flex min-h-screen w-full flex-col pb-4 pt-16 tablet:pb-6 tablet:pt-24 desktop:pb-8 desktop:pt-32 ${className}`}
       ref={ref}
       id={id}
     >
       <Container
-        className={`grid flex-1 grid-cols-1 items-center gap-16 desktop:grid-cols-2 desktop:gap-32 ${containerClassName}`}
+        className={`grid flex-1 grid-cols-1 items-center gap-12 tablet:gap-16 desktop:grid-cols-2 desktop:gap-24 ${containerClassName}`}
       >
         {children}
       </Container>

@@ -3,6 +3,7 @@ import { FC, useEffect } from 'react';
 import skills from './skills.json';
 import {
   BackendSkillsSection,
+  Footer,
   FrontendSkillsSection,
   Header,
   HeroSection,
@@ -24,6 +25,7 @@ export const App: FC = () => {
       <FrontendSkillsSection />
       <BackendSkillsSection />
       <ToolsAndKnowledgeSection />
+      <Footer />
     </>
   );
 };

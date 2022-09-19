@@ -9,7 +9,7 @@ import {
 import { useIntersection } from 'react-use';
 
 import { Container } from '.';
-import { useHeaderStore } from '../../state';
+import { useLayoutStore } from '../../state';
 
 type ContentSectionProps = {
   title?: string;
@@ -24,7 +24,7 @@ export const ContentSection: FC<ContentSectionProps> = ({
   containerClassName,
   id,
 }) => {
-  const { setHeader } = useHeaderStore();
+  const { setHeader } = useLayoutStore();
   const ref = useRef<HTMLDivElement>(null!);
   const intersection = useIntersection(ref, { threshold: 0.6 });
 

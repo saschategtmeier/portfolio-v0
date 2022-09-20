@@ -2,11 +2,9 @@ import { FC, useState } from 'react';
 
 import { EllipsisHorizontalIcon } from '@heroicons/react/24/solid';
 
-import { Container, Nav } from '.';
+import { Container, Initials, Nav } from '.';
 import { useBreakpoint } from '../../hooks';
 import { useLayoutStore } from '../../state';
-
-const Initials: FC = () => <div className='text-2xl font-bold'>ST</div>;
 
 export const Header: FC = () => {
   const { currentHeader } = useLayoutStore();
@@ -14,9 +12,9 @@ export const Header: FC = () => {
   const [navOpen, setNavOpen] = useState<boolean>(false);
 
   return (
-    <>
-      <Container className='fixed top-4 left-1/2 z-50 -translate-x-1/2'>
-        <div className='relative flex items-center justify-between'>
+    <div className='fixed top-0 z-50 w-full bg-gradient-to-b from-white/5 to-white/0 pt-4 pb-1 backdrop-blur-[1px]'>
+      <Container>
+        <div className='relative flex h-10 items-center justify-between'>
           <h1>{currentHeader}</h1>
 
           {breakpoint === 'desktop' && (
@@ -40,6 +38,6 @@ export const Header: FC = () => {
           )}
         </div>
       </Container>
-    </>
+    </div>
   );
 };

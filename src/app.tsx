@@ -1,7 +1,10 @@
 import { FC, useEffect } from 'react';
 
+import { BrowserRouter } from 'react-router-dom';
+
 import skills from './skills.json';
 import {
+  AboutMeSection,
   BackendSkillsSection,
   Footer,
   FrontendSkillsSection,
@@ -10,7 +13,6 @@ import {
   ToolsAndKnowledgeSection,
 } from './components';
 import { useSkillsStore } from './state';
-import { BrowserRouter, Link, Route, Router } from 'react-router-dom';
 
 export const App: FC = () => {
   const { setSkills } = useSkillsStore();
@@ -23,6 +25,7 @@ export const App: FC = () => {
     <BrowserRouter>
       <Header />
       <HeroSection />
+      <AboutMeSection />
       <FrontendSkillsSection />
       <BackendSkillsSection />
       <ToolsAndKnowledgeSection />

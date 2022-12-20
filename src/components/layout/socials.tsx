@@ -6,20 +6,20 @@ export const Socials: FC = () => (
     <SocialsLink
       name='GitHub'
       link='https://github.com/saschategtmeier'
-      logoLightMode='/socials/github-light-mode.png'
-      logoDarkMode='/socials/github-dark-mode.png'
+      logoLightMode='images/socials/github-light-mode.png'
+      logoDarkMode='images/socials/github-dark-mode.png'
     />
     <SocialsLink
       name='LinkedIn'
       link='https://www.linkedin.com/in/sascha-tegtmeier-49b95b17b'
-      logoLightMode='/socials/linkedIn-light-mode.png'
-      logoDarkMode='/socials/linkedIn-dark-mode.png'
+      logoLightMode='images/socials/linkedIn-light-mode.png'
+      logoDarkMode='images/socials/linkedIn-dark-mode.png'
     />
     <SocialsLink
       name='Xing'
       link='https://www.xing.com/profile/Sascha_Tegtmeier4'
-      logoLightMode='/socials/xing-light-mode.png'
-      logoDarkMode='/socials/xing-dark-mode.png'
+      logoLightMode='images/socials/xing-light-mode.png'
+      logoDarkMode='images/socials/xing-dark-mode.png'
     />
     <a
       className='text-sm hover:text-blue-500'

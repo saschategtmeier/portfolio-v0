@@ -1,29 +1,23 @@
 import { FC } from 'react';
+
+import { NavLink } from './nav-link';
 import { useLayoutStore } from '../../state';
-import { HashLink } from 'react-router-hash-link';
 
 export const Nav: FC = () => {
-  const { setIsContactDialogOpen } = useLayoutStore();
+  const { setIsContactDialogOpen, isNavbarOpen } = useLayoutStore();
 
   return (
-    <div className='flex items-center gap-6'>
-      <nav className='flex flex-wrap gap-4'>
-        <HashLink to='#frontend-skills' smooth>
-          Frontend
-        </HashLink>
-        <HashLink to='#backend-skills' smooth>
-          Backend
-        </HashLink>
-        <HashLink to='#tools-and-knowledge' smooth>
-          Tools & Knowledge
-        </HashLink>
-      </nav>
+    <nav className='flex flex-col items-center gap-6 desktop:flex-row'>
+      <NavLink to='#about-me'>About Me</NavLink>
+      <NavLink to='#frontend-skills'>Frontend</NavLink>
+      <NavLink to='#backend-skills'>Backend</NavLink>
+      <NavLink to='#tools-and-knowledge'>Tools & Knowledge</NavLink>
       <button
         className='rounded bg-blue-500 px-2 font-semibold text-white shadow-lg'
         onClick={() => setIsContactDialogOpen(true)}
       >
         Contact Me
       </button>
-    </div>
+    </nav>
   );
 };

@@ -1,23 +1,26 @@
 import { FC, HTMLAttributes } from 'react';
 
-import { SkillItem } from '.';
 import { SkillCollection } from '../../models';
+import { SkillItem } from './skill-item';
 
-type SkillItemListProps = {
+type SkillItemGridProps = {
   skillCollection?: SkillCollection;
-  title?: string;
+  useFullWidth?: boolean;
 } & Pick<HTMLAttributes<HTMLDivElement>, 'className'>;
 
-export const SkillItemList: FC<SkillItemListProps> = ({
+export const SkillItemGrid: FC<SkillItemGridProps> = ({
   skillCollection,
-  title,
+  useFullWidth = false,
   className,
 }) => {
+  const colSpan = useFullWidth
+    ? 'col-span-2 grid-cols-1 desktop:grid-cols-2'
+    : 'col-span-1 grid-cols-1';
+
   return (
     <div
-      className={`flex flex-col gap-6 tablet:gap-8 desktop:gap-10 ${className}`}
+      className={`grid gap-6 tablet:gap-8 desktop:gap-10 ${className} ${colSpan}`}
     >
-      {title && <h2>{title}</h2>}
       {skillCollection?.skills.map((skill, index) => (
         <SkillItem key={index} skill={skill} />
       ))}

@@ -63,9 +63,9 @@
         "tags": ["REST", "CRUD"]
       },
       {
-        "name": "DataAccess / ORM / Mapping",
+        "name": "DataAccess / ORM",
         "level": 3,
-        "tags": ["Entity Framework", "Dapper", "MongoDB Client", "AutoMapper"]
+        "tags": ["Entity Framework", "Dapper", "MongoDB Client"]
       },
       {
         "name": "Worker Services",

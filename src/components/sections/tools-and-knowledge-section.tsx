@@ -1,15 +1,14 @@
 import { FC } from 'react';
 
-import { ContentSection, SkillItemList } from '..';
+import { ContentSection, SkillItemGrid } from '..';
 import { useSkillsStore } from '../../state';
 
 export const ToolsAndKnowledgeSection: FC = () => {
-  const { tools, knowledge } = useSkillsStore();
+  const { toolsAndKnowledge } = useSkillsStore();
 
   return (
-    <ContentSection id='tools-and-knowledge' title='Tools & Knowledge'>
-      <SkillItemList skillCollection={tools} title='Tools' />
-      <SkillItemList skillCollection={knowledge} title='Knowledge' />
+    <ContentSection id="tools-and-knowledge" title="Tools & Knowledge">
+      <SkillItemGrid skillCollection={toolsAndKnowledge} useFullWidth={true} />
     </ContentSection>
   );
 };

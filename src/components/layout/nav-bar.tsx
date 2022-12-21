@@ -8,9 +8,12 @@ export const NavBar: FC = () => {
       <NavLink to="#frontend-skills">Frontend</NavLink>
       <NavLink to="#backend-skills">Backend</NavLink>
       <NavLink to="#tools-and-knowledge">Tools & Knowledge</NavLink>
-      <button className="rounded bg-blue-500 px-2 font-semibold text-white shadow-lg">
+      <a
+        href="mailto:hello@saschategtmeier.dev"
+        className="rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-white"
+      >
         Contact Me
-      </button>
+      </a>
     </div>
   );
 };

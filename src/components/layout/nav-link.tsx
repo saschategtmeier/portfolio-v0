@@ -16,7 +16,7 @@ export const NavLink: FC<NavLinkProps> = ({ to, children }) => {
     <HashLink
       to={to}
       smooth
-      className="hover:text-blue-500"
+      className="rounded px-2 hover:ring-2 hover:ring-blue-500"
       onClick={() => setIsNavbarOpen(false)}
     >
       {children}

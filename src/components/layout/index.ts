@@ -7,6 +7,5 @@ export * from './initials';
 export * from './mobile-nav';
 export * from './nav-bar';
 export * from './nav-link';
-export * from './nav';
 export * from './socials-link';
 export * from './socials';

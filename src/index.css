@@ -23,3 +23,9 @@
     @apply h-full w-full;
   }
 }
+
+@layer components {
+  .hoverable {
+    @apply rounded px-2 hover:ring-2 hover:ring-blue-500 active:ring-2 active:ring-blue-500;
+  }
+}

@@ -1,7 +1,6 @@
 export * from './container';
 export * from './content-section';
 export * from './desktop-nav';
-export * from './footer';
 export * from './header';
 export * from './initials';
 export * from './mobile-nav';

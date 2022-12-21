@@ -6,7 +6,6 @@ import skills from './skills.json';
 import {
   AboutMeSection,
   BackendSkillsSection,
-  Footer,
   FrontendSkillsSection,
   Header,
   HeroSection,
@@ -29,7 +28,6 @@ export const App: FC = () => {
       <FrontendSkillsSection />
       <BackendSkillsSection />
       <ToolsAndKnowledgeSection />
-      <Footer />
     </BrowserRouter>
   );
 };

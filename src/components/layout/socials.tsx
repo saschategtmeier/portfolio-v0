@@ -1,8 +1,10 @@
-import { FC } from 'react';
+import { FC, HTMLAttributes } from 'react';
 import { SocialsLink } from '.';
 
-export const Socials: FC = () => (
-  <div className="flex items-center gap-4 desktop:gap-6">
+type SocialsProps = Pick<HTMLAttributes<HTMLDivElement>, 'className'>;
+
+export const Socials: FC<SocialsProps> = ({ className }) => (
+  <div className={`flex items-center gap-4 desktop:gap-6 ${className}`}>
     <SocialsLink
       name="GitHub"
       link="https://github.com/saschategtmeier"

@@ -22,6 +22,18 @@
   #root {
     @apply h-full w-full;
   }
+
+  ::-webkit-scrollbar {
+    @apply w-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply my-2 rounded-full bg-none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-200/50 hover:bg-blue-500;
+  }
 }
 
 @layer components {

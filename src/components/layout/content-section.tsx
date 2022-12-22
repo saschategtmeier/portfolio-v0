@@ -28,7 +28,7 @@ export const ContentSection: FC<ContentSectionProps> = ({
   const { setCurrentPageSection } = useLayoutStore();
   const navigate = useNavigate();
   const ref = useRef<HTMLDivElement>(null!);
-  const intersection = useIntersection(ref, { threshold: 0.25 });
+  const intersection = useIntersection(ref, { threshold: 0.3 });
 
   useEffect(() => {
     if (!!intersection?.isIntersecting) {

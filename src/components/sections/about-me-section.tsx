@@ -1,13 +1,15 @@
 import { FC } from 'react';
+
+import { PAGE_SECTIONS_DATA } from '../../constants';
 import { ContentSection } from '../layout';
 
 export const AboutMeSection: FC = () => {
   return (
-    <ContentSection id="about-me" title="About Me">
+    <ContentSection sectionData={PAGE_SECTIONS_DATA['about-me']}>
       <div className="col-span-2 flex flex-col items-center justify-center">
         <img
           src="images/avatar.jpeg"
-          className="mb-20 aspect-square w-96 rounded-full"
+          className="mb-20 aspect-square w-96 rounded-full drop-shadow"
         />
         <div className="flex max-w-[60rem] flex-col gap-8 text-center text-xl leading-relaxed">
           <p>

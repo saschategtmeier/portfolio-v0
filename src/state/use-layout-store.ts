@@ -1,8 +1,9 @@
 import create from 'zustand';
+import { PageSectionData } from '../models';
 
 type LayoutState = {
-  currentHeader: string;
-  setHeader: (header: string) => void;
+  currentPageSection: PageSectionData | null;
+  setCurrentPageSection: (sectionData: PageSectionData) => void;
   isNavbarOpen: boolean;
   setIsNavbarOpen: (open: boolean) => void;
   isContactMeDialogOpen: boolean;
@@ -10,8 +11,9 @@ type LayoutState = {
 };
 
 export const useLayoutStore = create<LayoutState>((set) => ({
-  currentHeader: '',
-  setHeader: (header) => set((state) => ({ ...state, currentHeader: header })),
+  currentPageSection: null,
+  setCurrentPageSection: (sectionData) =>
+    set((state) => ({ ...state, currentPageSection: sectionData })),
   isNavbarOpen: false,
   setIsNavbarOpen: (open) => set((state) => ({ ...state, isNavbarOpen: open })),
   isContactMeDialogOpen: false,

@@ -4,7 +4,7 @@ import { SocialsLink } from '.';
 type SocialsProps = Pick<HTMLAttributes<HTMLDivElement>, 'className'>;
 
 export const Socials: FC<SocialsProps> = ({ className }) => (
-  <div className={`flex items-center gap-4 desktop:gap-6 ${className}`}>
+  <div className={`flex items-center gap-2 desktop:gap-4 ${className}`}>
     <SocialsLink
       name="GitHub"
       link="https://github.com/saschategtmeier"

@@ -7,16 +7,17 @@ import { useLayoutStore } from '../../state';
 
 type NavLinkProps = {
   to: To;
+  isActive: boolean;
 } & PropsWithChildren;
 
-export const NavLink: FC<NavLinkProps> = ({ to, children }) => {
+export const NavLink: FC<NavLinkProps> = ({ to, isActive, children }) => {
   const { setIsNavbarOpen } = useLayoutStore();
 
   return (
     <HashLink
       to={to}
       smooth
-      className="hoverable"
+      className={`hoverable ${isActive && 'rounded ring-2 ring-blue-500'}`}
       onClick={() => setIsNavbarOpen(false)}
     >
       {children}

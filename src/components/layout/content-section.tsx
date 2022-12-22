@@ -6,31 +6,35 @@ import {
   useRef,
 } from 'react';
 
+import { useNavigate } from 'react-router';
 import { useIntersection } from 'react-use';
 
 import { Container } from '.';
+import { getSectionUrlHash } from '../../constants';
+import { PageSectionData } from '../../models';
 import { useLayoutStore } from '../../state';
 
 type ContentSectionProps = {
-  title?: string;
+  sectionData: PageSectionData;
   containerClassName?: string;
 } & PropsWithChildren &
-  Pick<HTMLAttributes<HTMLDivElement>, 'className' | 'id'>;
+  Pick<HTMLAttributes<HTMLDivElement>, 'className'>;
 
 export const ContentSection: FC<ContentSectionProps> = ({
-  title,
+  sectionData,
   children,
   className,
   containerClassName,
-  id,
 }) => {
-  const { setHeader } = useLayoutStore();
+  const { setCurrentPageSection } = useLayoutStore();
+  const navigate = useNavigate();
   const ref = useRef<HTMLDivElement>(null!);
   const intersection = useIntersection(ref, { threshold: 0.6 });
 
   useEffect(() => {
     if (!!intersection?.isIntersecting) {
-      setHeader(title ?? '');
+      setCurrentPageSection(sectionData);
+      navigate(getSectionUrlHash(sectionData.section));
     }
   }, [intersection]);
 
@@ -40,7 +44,7 @@ export const ContentSection: FC<ContentSectionProps> = ({
         className ?? ''
       }`}
       ref={ref}
-      id={id}
+      id={sectionData.section}
     >
       <Container
         className={`grid flex-1 grid-cols-1 items-center gap-12 tablet:gap-16 desktop:grid-cols-2 desktop:gap-24 ${

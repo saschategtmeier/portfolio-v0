@@ -39,7 +39,7 @@ export const ContentSection: FC<ContentSectionProps> = ({
 
   return (
     <section
-      className={`flex min-h-screen w-full snap-start flex-col pb-4 pt-16 tablet:pb-6 tablet:pt-24 desktop:pb-8 desktop:pt-32 ${
+      className={`flex min-h-screen w-full flex-col pb-4 pt-16 tablet:pb-6 tablet:pt-24 desktop:pb-8 desktop:pt-32 ${
         className ?? ''
       }`}
       ref={ref}

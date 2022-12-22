@@ -23,7 +23,7 @@ export const App: FC = () => {
   return (
     <BrowserRouter>
       <Header />
-      <main className="h-screen snap-y snap-proximity overflow-y-auto">
+      <main>
         <HeroSection />
         <AboutMeSection />
         <FrontendSkillsSection />

@@ -1,11 +1,7 @@
 import { FC } from 'react';
 
 import { NavLink } from '.';
-import {
-  PAGE_SECTIONS_DATA,
-  PAGE_SECTIONS,
-  getSectionUrlHash,
-} from '../../constants';
+import { PAGE_SECTIONS_DATA, PAGE_SECTIONS } from '../../constants';
 import { useLayoutStore } from '../../state';
 
 export const NavBar: FC = () => {
@@ -17,13 +13,12 @@ export const NavBar: FC = () => {
         if (sectionKey === 'hero') {
           return;
         }
-
         const { title, navTitle } = PAGE_SECTIONS_DATA[sectionKey];
 
         return (
           <NavLink
             key={sectionKey}
-            to={getSectionUrlHash(sectionKey)}
+            to={`#${sectionKey}`}
             isActive={sectionKey === currentPageSection?.section}
           >
             {navTitle ?? title}

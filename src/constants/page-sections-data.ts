@@ -1,7 +1,7 @@
 import { PageSection, PageSectionData } from '../models';
 
 export const PAGE_SECTIONS_DATA: Record<PageSection, PageSectionData> = {
-  hero: { section: 'hero', urlHash: '#' },
+  hero: { section: 'hero' },
   'about-me': { section: 'about-me', title: 'About Me' },
   frontend: {
     section: 'frontend',
@@ -18,9 +18,3 @@ export const PAGE_SECTIONS_DATA: Record<PageSection, PageSectionData> = {
     title: 'Tools & Knowledge',
   },
 };
-
-export function getSectionUrlHash(sectionKey: PageSection): string {
-  const { section, urlHash } = PAGE_SECTIONS_DATA[sectionKey];
-
-  return urlHash ?? `#${section}`;
-}

@@ -10,7 +10,6 @@ import { useNavigate } from 'react-router';
 import { useIntersection } from 'react-use';
 
 import { Container } from '.';
-import { getSectionUrlHash } from '../../constants';
 import { PageSectionData } from '../../models';
 import { useLayoutStore } from '../../state';
 
@@ -29,18 +28,18 @@ export const ContentSection: FC<ContentSectionProps> = ({
   const { setCurrentPageSection } = useLayoutStore();
   const navigate = useNavigate();
   const ref = useRef<HTMLDivElement>(null!);
-  const intersection = useIntersection(ref, { threshold: 0.6 });
+  const intersection = useIntersection(ref, { threshold: 0.25 });
 
   useEffect(() => {
     if (!!intersection?.isIntersecting) {
       setCurrentPageSection(sectionData);
-      navigate(getSectionUrlHash(sectionData.section));
+      navigate(`#${sectionData.section}`);
     }
   }, [intersection]);
 
   return (
-    <div
-      className={`flex min-h-screen w-full flex-col pb-4 pt-16 tablet:pb-6 tablet:pt-24 desktop:pb-8 desktop:pt-32 ${
+    <section
+      className={`flex min-h-screen w-full snap-start flex-col pb-4 pt-16 tablet:pb-6 tablet:pt-24 desktop:pb-8 desktop:pt-32 ${
         className ?? ''
       }`}
       ref={ref}
@@ -53,6 +52,6 @@ export const ContentSection: FC<ContentSectionProps> = ({
       >
         {children}
       </Container>
-    </div>
+    </section>
   );
 };

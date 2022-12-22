@@ -23,11 +23,13 @@ export const App: FC = () => {
   return (
     <BrowserRouter>
       <Header />
-      <HeroSection />
-      <AboutMeSection />
-      <FrontendSkillsSection />
-      <BackendSkillsSection />
-      <ToolsAndKnowledgeSection />
+      <main className="h-screen snap-y snap-proximity overflow-y-scroll">
+        <HeroSection />
+        <AboutMeSection />
+        <FrontendSkillsSection />
+        <BackendSkillsSection />
+        <ToolsAndKnowledgeSection />
+      </main>
     </BrowserRouter>
   );
 };

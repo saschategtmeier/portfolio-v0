@@ -17,7 +17,7 @@ export const SocialsLink: FC<SocialsLinkProps> = ({
     href={link}
     target="_blank"
     rel="noopener noreferrer"
-    className="hoverable w-10 py-2 desktop:w-14"
+    className="hoverable w-12 py-2 desktop:w-14"
   >
     <img className="block dark:hidden" src={logoLightMode} alt={name} />
     <img className="hidden dark:block" src={logoDarkMode} alt={name} />

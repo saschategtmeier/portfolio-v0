@@ -1,6 +1,7 @@
 import { FC, useEffect } from 'react';
 
 import { BrowserRouter } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 import skills from './skills.json';
 import {
@@ -30,6 +31,7 @@ export const App: FC = () => {
         <BackendSkillsSection />
         <ToolsAndKnowledgeSection />
       </main>
+      <Toaster />
     </BrowserRouter>
   );
 };

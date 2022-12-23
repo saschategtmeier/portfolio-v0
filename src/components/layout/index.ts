@@ -1,4 +1,7 @@
+export * from './contact-dialog';
+export * from './contact-form';
 export * from './container';
+export * from './content-section';
 export * from './content-section';
 export * from './desktop-nav';
 export * from './header';

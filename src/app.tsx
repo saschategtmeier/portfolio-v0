@@ -7,6 +7,7 @@ import skills from './skills.json';
 import {
   AboutMeSection,
   BackendSkillsSection,
+  ContactDialog,
   FrontendSkillsSection,
   Header,
   HeroSection,
@@ -31,6 +32,7 @@ export const App: FC = () => {
         <BackendSkillsSection />
         <ToolsAndKnowledgeSection />
       </main>
+      <ContactDialog />
       <Toaster />
     </BrowserRouter>
   );

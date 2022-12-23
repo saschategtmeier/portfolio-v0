@@ -35,7 +35,7 @@ export const Socials: FC<SocialsProps> = ({ className }) => {
         href="mailto:hello@saschategtmeier.dev"
       >
         {currentBreakpoint === 'mobile' && (
-          <InboxArrowDownIcon className={`h-10 w-10`} />
+          <InboxArrowDownIcon className={`h-8 w-8`} />
         )}
         {currentBreakpoint !== 'mobile' && (
           <span>hello@saschategtmeier.dev</span>

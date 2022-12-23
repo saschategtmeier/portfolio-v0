@@ -11,7 +11,7 @@ type CustomToastProps = {
 export const CustomToast: FC<CustomToastProps> = ({ message, icon, toast }) => {
   return (
     <div
-      className={`overlayable flex items-center gap-4 rounded px-6 py-2 ring-2 ring-blue-500 ${
+      className={`overlayable flex items-center gap-2 rounded px-6 py-2 ring-2 ring-blue-500 ${
         toast.visible ? 'animate-enter' : 'animate-leave'
       }`}
     >

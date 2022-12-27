@@ -37,7 +37,7 @@ export const ContactDialog: FC = () => {
               <Dialog.Panel className="overlayable w-full transform overflow-hidden rounded-2xl px-6 py-6 text-left align-middle transition-all tablet:max-w-screen-tablet tablet:px-12 desktop:max-w-screen-tablet">
                 <Dialog.Title as="h2">Get in touch with me! 👋</Dialog.Title>
 
-                <div className="mt-4 flex flex-col gap-4">
+                <div className="mt-6 flex flex-col gap-4">
                   <ContactForm />
                   <hr />
                   <Socials />

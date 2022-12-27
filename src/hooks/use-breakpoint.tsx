@@ -8,7 +8,7 @@ const useCustomBreakpoints = createBreakpoint({
 });
 
 export const useBreakpoint = () => {
-  const [state, setState] = useState<'mobile' | 'tablet' | 'desktop'>('mobile');
+  const [state, setState] = useState<'mobile' | 'tablet' | 'desktop'>('desktop');
   const currentBreakpoint = useCustomBreakpoints();
 
   useEffect(() => {

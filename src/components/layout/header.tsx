@@ -17,8 +17,8 @@ export const Header: FC = () => {
       <Container>
         <div className="flex justify-between">
           <h1>{currentPageSection?.title ?? ''}</h1>
-          {currentBreakpoint !== 'desktop' && <MobileNav />}
           {currentBreakpoint === 'desktop' && <DesktopNav />}
+          {currentBreakpoint !== 'desktop' && <MobileNav />}
         </div>
       </Container>
     </div>

@@ -3,6 +3,7 @@ import { FC, PropsWithChildren } from 'react';
 import { To } from 'react-router';
 import { HashLink } from 'react-router-hash-link';
 
+import { ANIMATE } from '../../constants';
 import { useLayoutStore } from '../../state';
 
 type NavLinkProps = {
@@ -17,7 +18,9 @@ export const NavLink: FC<NavLinkProps> = ({ to, isActive, children }) => {
     <HashLink
       to={to}
       smooth
-      className={`hoverable ${isActive && 'rounded ring-2 ring-blue-500'}`}
+      className={`hoverable ${ANIMATE.nav.item} ${
+        isActive && 'rounded ring-2 ring-blue-500'
+      }`}
       onClick={() => setIsNavbarOpen(false)}
     >
       {children}

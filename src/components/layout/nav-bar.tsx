@@ -3,7 +3,11 @@ import { FC, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 import { NavLink } from '.';
-import { PAGE_SECTIONS_DATA, PAGE_SECTIONS, ANIMATE } from '../../constants';
+import {
+  PAGE_SECTIONS_DATA,
+  PAGE_SECTIONS,
+  ANIMATE_CLASSES,
+} from '../../constants';
 import { useLayoutStore } from '../../state';
 
 export const NavBar: FC = () => {
@@ -13,7 +17,7 @@ export const NavBar: FC = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(`.${ANIMATE.nav.item}`, {
+      gsap.from(`.${ANIMATE_CLASSES.nav.item}`, {
         y: -16,
         opacity: 0,
         ease: 'power3.out',
@@ -52,7 +56,7 @@ export const NavBar: FC = () => {
       })}
 
       <button
-        className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-black dark:hover:ring-white ${ANIMATE.nav.item}`}
+        className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-black dark:hover:ring-white ${ANIMATE_CLASSES.nav.item}`}
         onClick={handleContactMeClick}
       >
         Contact Me

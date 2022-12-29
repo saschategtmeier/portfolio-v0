@@ -3,7 +3,7 @@ import { FC, useLayoutEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 import { SkillLevelBar, SkillTag } from '.';
-import { ANIMATE } from '../../constants';
+import { ANIMATE_CLASSES } from '../../constants';
 import { Skill } from '../../models';
 
 type SkillItemProps = {
@@ -17,7 +17,7 @@ export const SkillItem: FC<SkillItemProps> = ({
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(`.${ANIMATE.skills.tag}`, {
+      gsap.from(`.${ANIMATE_CLASSES.skills.tag}`, {
         y: -8,
         stagger: { amount: 0.25, from: 'end' },
       });
@@ -32,7 +32,11 @@ export const SkillItem: FC<SkillItemProps> = ({
         <h3 className="drop-shadow-sm">{name}</h3>
         <div className="flex flex-wrap gap-2" ref={tagContainerRef}>
           {tags.map((tag, index) => (
-            <SkillTag key={index} tag={tag} className={ANIMATE.skills.tag} />
+            <SkillTag
+              key={index}
+              tag={tag}
+              className={ANIMATE_CLASSES.skills.tag}
+            />
           ))}
         </div>
       </div>

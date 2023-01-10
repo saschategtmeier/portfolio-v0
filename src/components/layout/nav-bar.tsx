@@ -28,17 +28,6 @@ const ContactMeButton: FC = () => {
   );
 };
 
-const ContactMeLink: FC = () => {
-  return (
-    <a
-      href="mailto:hello@saschategtmeier.dev"
-      className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-black dark:hover:ring-white ${ANIMATE_CLASSES.nav.item}`}
-    >
-      Contact me
-    </a>
-  );
-};
-
 export const NavBar: FC = () => {
   const navBarRef = useRef<HTMLDivElement>(null!);
   const { currentPageSection } = useLayoutStore();
@@ -78,7 +67,7 @@ export const NavBar: FC = () => {
         );
       })}
 
-      <ContactMeLink />
+      <ContactMeButton />
     </div>
   );
 };

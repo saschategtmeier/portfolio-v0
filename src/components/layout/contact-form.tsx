@@ -37,7 +37,7 @@ export const ContactForm: FC = () => {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitSuccessful, isValid, errors },
+    formState: { isValid, errors },
     reset,
   } = useForm<ContactFormData>({ mode: 'onChange' });
 
@@ -47,22 +47,17 @@ export const ContactForm: FC = () => {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encodeFormData({ 'form-name': 'contact', ...data }),
     })
-      .then(() => successToast())
+      .then(() => {
+        successToast();
+        reset({
+          name: '',
+          email: '',
+          message: '',
+        });
+      })
       .catch(() => failureToast())
       .finally(() => setIsContactDialogOpen(false));
   };
-
-  useEffect(() => {
-    if (!isSubmitSuccessful) {
-      return;
-    }
-
-    reset({
-      name: '',
-      email: '',
-      message: '',
-    });
-  }, [isSubmitSuccessful, reset]);
 
   return (
     <form name="contact" onSubmit={handleSubmit(handleFormSubmit)}>

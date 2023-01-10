@@ -10,10 +10,38 @@ import {
 } from '../../constants';
 import { useLayoutStore } from '../../state';
 
+const ContactMeButton: FC = () => {
+  const { setIsContactDialogOpen, setIsNavbarOpen } = useLayoutStore();
+
+  const handleContactMeClick = () => {
+    setIsContactDialogOpen(true);
+    setIsNavbarOpen(false);
+  };
+
+  return (
+    <button
+      className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-black dark:hover:ring-white ${ANIMATE_CLASSES.nav.item}`}
+      onClick={handleContactMeClick}
+    >
+      Contact me
+    </button>
+  );
+};
+
+const ContactMeLink: FC = () => {
+  return (
+    <a
+      href="mailto:hello@saschategtmeier.dev"
+      className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-black dark:hover:ring-white ${ANIMATE_CLASSES.nav.item}`}
+    >
+      Contact me
+    </a>
+  );
+};
+
 export const NavBar: FC = () => {
   const navBarRef = useRef<HTMLDivElement>(null!);
-  const { currentPageSection, setIsContactDialogOpen, setIsNavbarOpen } =
-    useLayoutStore();
+  const { currentPageSection } = useLayoutStore();
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -27,11 +55,6 @@ export const NavBar: FC = () => {
 
     return () => ctx.revert();
   }, []);
-
-  const handleContactMeClick = () => {
-    setIsContactDialogOpen(true);
-    setIsNavbarOpen(false);
-  };
 
   return (
     <div
@@ -55,12 +78,7 @@ export const NavBar: FC = () => {
         );
       })}
 
-      <button
-        className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-black dark:hover:ring-white ${ANIMATE_CLASSES.nav.item}`}
-        onClick={handleContactMeClick}
-      >
-        Contact me
-      </button>
+      <ContactMeLink />
     </div>
   );
 };

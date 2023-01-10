@@ -44,7 +44,7 @@ export const HeroSection: FC = () => {
       sectionData={PAGE_SECTIONS_DATA['hero']}
       shouldCenterItems={false}
     >
-      <div className="col-span-2 my-24 max-w-[1200px] justify-self-center text-5xl font-bold tracking-wide drop-shadow desktop:text-[5rem] desktop:leading-normal">
+      <div className="col-span-2 my-4 max-w-[1200px] justify-self-center text-5xl font-bold tracking-wide drop-shadow desktop:my-24 desktop:text-[5rem] desktop:leading-normal">
         <span>Hi!</span>
         <br />
         My name is <span className="text-blue-500">Sascha</span> and I am a{' '}

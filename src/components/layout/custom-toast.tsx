@@ -7,7 +7,6 @@ type CustomToastProps = {
   toast: Toast;
 };
 
-// TODO implement enter/leave animations
 export const CustomToast: FC<CustomToastProps> = ({ message, icon, toast }) => {
   return (
     <div

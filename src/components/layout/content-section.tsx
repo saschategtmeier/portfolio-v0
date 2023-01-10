@@ -16,6 +16,7 @@ import { useLayoutStore } from '../../state';
 type ContentSectionProps = {
   sectionData: PageSectionData;
   containerClassName?: string;
+  shouldCenterItems?: boolean;
 } & PropsWithChildren &
   Pick<HTMLAttributes<HTMLDivElement>, 'className'>;
 
@@ -24,6 +25,7 @@ export const ContentSection: FC<ContentSectionProps> = ({
   children,
   className,
   containerClassName,
+  shouldCenterItems = true,
 }) => {
   const { setCurrentPageSection } = useLayoutStore();
   const navigate = useNavigate();
@@ -46,9 +48,9 @@ export const ContentSection: FC<ContentSectionProps> = ({
       id={sectionData.section}
     >
       <Container
-        className={`grid flex-1 grid-cols-1 items-center gap-12 tablet:gap-16 desktop:grid-cols-2 desktop:gap-24 ${
-          containerClassName ?? ''
-        }`}
+        className={`grid flex-1 grid-cols-1 gap-12 tablet:gap-16 desktop:grid-cols-2 desktop:gap-24 ${
+          shouldCenterItems && 'items-center'
+        } ${containerClassName ?? ''}`}
       >
         {children}
       </Container>

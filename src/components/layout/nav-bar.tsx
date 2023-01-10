@@ -59,7 +59,7 @@ export const NavBar: FC = () => {
         className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-black dark:hover:ring-white ${ANIMATE_CLASSES.nav.item}`}
         onClick={handleContactMeClick}
       >
-        Contact Me
+        Contact me
       </button>
     </div>
   );

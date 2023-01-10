@@ -2,6 +2,8 @@ import { FC, useEffect } from 'react';
 
 import { BrowserRouter } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import skills from './skills.json';
 import {
@@ -14,6 +16,8 @@ import {
   ToolsAndKnowledgeSection,
 } from './components';
 import { useSkillsStore } from './state';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export const App: FC = () => {
   const { setSkills } = useSkillsStore();

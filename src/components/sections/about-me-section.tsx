@@ -10,12 +10,19 @@ export const AboutMeSection: FC = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.from(imageRef.current, {y:-24})
-      gsap.from(textContainerRef.current, {y:24} );
-    }, textContainerRef)
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: imageRef.current,
+            toggleActions: 'play reverse play reverse',
+          },
+        })
+        .from(imageRef.current, { y: -24 })
+        .from(textContainerRef.current, { y: 24 }, 0);
+    }, textContainerRef);
 
     return () => ctx.revert();
-  }, [])
+  }, []);
 
   return (
     <ContentSection sectionData={PAGE_SECTIONS_DATA['about-me']}>
@@ -25,7 +32,10 @@ export const AboutMeSection: FC = () => {
           className="mb-20 aspect-square w-96 rounded-full drop-shadow"
           ref={imageRef}
         />
-        <div className="flex max-w-[60rem] flex-col gap-8 text-center text-xl leading-relaxed" ref={textContainerRef}>
+        <div
+          className="flex max-w-[60rem] flex-col gap-8 text-center text-xl leading-relaxed"
+          ref={textContainerRef}
+        >
           <p>
             Already as a teenager I noticed that the world of IT fascinates me
             and that I would like to make this field my profession. Driven by a

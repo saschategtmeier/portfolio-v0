@@ -1,14 +1,12 @@
-import create from "zustand";
+import create from 'zustand';
 
-import { SkillCategory } from "../enums";
-import { SkillCollection } from "../models";
+import { SkillCategory } from '../enums';
+import { SkillCollection } from '../models';
 
 type SkillsState = {
   frontendSkills: SkillCollection | undefined;
   backendSkills: SkillCollection | undefined;
   toolsAndKnowledge: SkillCollection | undefined;
-  knowledge: SkillCollection | undefined;
-  uiUxSkills: SkillCollection | undefined;
   setSkills: (skillsCollections: SkillCollection[]) => void;
 };
 
@@ -16,8 +14,6 @@ export const useSkillsStore = create<SkillsState>((set) => ({
   frontendSkills: undefined,
   backendSkills: undefined,
   toolsAndKnowledge: undefined,
-  knowledge: undefined,
-  uiUxSkills: undefined,
   setSkills: (skillsCollections) =>
     set((state) => ({
       ...state,

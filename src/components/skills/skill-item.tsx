@@ -20,6 +20,10 @@ export const SkillItem: FC<SkillItemProps> = ({
       gsap.from(`.${ANIMATE_CLASSES.skills.tag}`, {
         y: -8,
         stagger: { amount: 0.25, from: 'end' },
+        scrollTrigger: {
+          trigger: `.${ANIMATE_CLASSES.skills.tag}`,
+          toggleActions: 'play reverse play reverse',
+        },
       });
     }, tagContainerRef);
 

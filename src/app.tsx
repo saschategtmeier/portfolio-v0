@@ -1,13 +1,39 @@
-import { FC } from 'react';
-import { ContentSection, Header } from './components';
+import { FC, useEffect } from 'react';
+
+import { BrowserRouter } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+
+import skills from './skills.json';
+import {
+  AboutMeSection,
+  BackendSkillsSection,
+  ContactDialog,
+  FrontendSkillsSection,
+  Header,
+  HeroSection,
+  ToolsAndKnowledgeSection,
+} from './components';
+import { useSkillsStore } from './state';
 
 export const App: FC = () => {
+  const { setSkills } = useSkillsStore();
+
+  useEffect(() => {
+    setSkills(skills);
+  }, []);
+
   return (
-    <>
+    <BrowserRouter>
       <Header />
-      <ContentSection title='Section One'>section one</ContentSection>
-      <ContentSection title='Section Two'>section two</ContentSection>
-      <ContentSection title='Section Three'>section three</ContentSection>
-    </>
+      <main>
+        <HeroSection />
+        <AboutMeSection />
+        <FrontendSkillsSection />
+        <BackendSkillsSection />
+        <ToolsAndKnowledgeSection />
+      </main>
+      <ContactDialog />
+      <Toaster />
+    </BrowserRouter>
   );
 };

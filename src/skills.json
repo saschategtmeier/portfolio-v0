@@ -1,0 +1,162 @@
+[
+  {
+    "category": 0,
+    "skills": [
+      {
+        "name": "Angular",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "Javascript / Typescript",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "CSS / Sass / Tailwind CSS",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "Markup/DataTransport Languages",
+        "level": 4,
+        "tags": ["HTML", "Markdown", "JSON", "XML"]
+      },
+      {
+        "name": "RxJs",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "React",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Three.js",
+        "level": 1,
+        "tags": ["3D", "React Three Fiber", "Shaders"]
+      },
+      {
+        "name": "Redux Pattern",
+        "level": 2,
+        "tags": ["NgRx", "NgRx Entity", "Zustand"]
+      },
+      {
+        "name": "UI Libraries",
+        "level": 3,
+        "tags": ["Kendo UI", "Material UI", "Headless UI"]
+      }
+    ]
+  },
+  {
+    "category": 1,
+    "skills": [
+      {
+        "name": ".NET 7.0+ / .NET Core / .NET",
+        "level": 3,
+        "tags": []
+      },
+      {
+        "name": "(RESTful) API's",
+        "level": 3,
+        "tags": ["REST", "CRUD"]
+      },
+      {
+        "name": "DataAccess / ORM",
+        "level": 3,
+        "tags": ["Entity Framework", "Dapper", "MongoDB Client"]
+      },
+      {
+        "name": "Worker Services",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Databases",
+        "level": 2,
+        "tags": ["SQL", "Microsoft SQL", "noSQL", "MongoDB"]
+      },
+      {
+        "name": "Generators / Converters",
+        "level": 2,
+        "tags": ["FFmpeg", "PDF"]
+      }
+    ]
+  },
+  {
+    "category": 2,
+    "skills": [
+      {
+        "name": "IDEs",
+        "level": 4,
+        "tags": ["Visual Studio Code", "Visual Studio", "(Neo)Vim"]
+      },
+      {
+        "name": "Monorepos",
+        "level": 3,
+        "tags": ["Nrwl Nx"]
+      },
+      {
+        "name": "Git",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Shell",
+        "level": 2,
+        "tags": ["Bash", "Zsh"]
+      },
+      {
+        "name": "CI/CD",
+        "level": 1,
+        "tags": ["YAML Pipelines", "Netlify", "TeamCity"]
+      },
+      {
+        "name": "Docker",
+        "level": 1,
+        "tags": []
+      },
+      {
+        "name": "Scrum / Agile",
+        "level": 3,
+        "tags": ["Jira", "TeamCity"]
+      },
+      {
+        "name": "Dependency Injection / IoC Containers",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "SOLID Principles",
+        "level": 2,
+        "tags": []
+      },
+      {
+        "name": "Design Patterns",
+        "level": 1,
+        "tags": []
+      },
+      {
+        "name": "Testing",
+        "level": 2,
+        "tags": ["Unit Testing", "Integration Testing"]
+      },
+      {
+        "name": "UI/UX",
+        "level": 3,
+        "tags": ["Figma", "Storybook", "Photoshop", "Design Systems"]
+      },
+      {
+        "name": "Deutsch",
+        "level": 4,
+        "tags": []
+      },
+      {
+        "name": "English",
+        "level": 3,
+        "tags": []
+      }
+    ]
+  }
+]

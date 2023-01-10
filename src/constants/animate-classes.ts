@@ -1,4 +1,4 @@
-export const ANIMATE = {
+export const ANIMATE_CLASSES = {
   nav: {
     item: 'animate-nav-item',
   },

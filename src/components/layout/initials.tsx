@@ -8,7 +8,7 @@ import { useLayoutStore } from '../../state';
 const initialsHash: PageSection = 'hero';
 
 export const Initials: FC = () => {
-  const { currentPageSection } = useLayoutStore();
+  const { currentPageSection, setIsNavbarOpen } = useLayoutStore();
 
   return (
     <HashLink
@@ -19,6 +19,7 @@ export const Initials: FC = () => {
           : 'border-black dark:border-white'
       }`}
       smooth
+      onClick={() => setIsNavbarOpen(false)}
     >
       ST
     </HashLink>

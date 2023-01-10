@@ -93,7 +93,7 @@ export const ContactForm: FC = () => {
             })}
             name="email"
             id="mail"
-            placeholder="hate.portals@white-wolf.com"
+            placeholder="portals.suck@whitewolf.com"
             className={errors.email && 'ring-2 ring-red-500'}
           />
         </div>

@@ -15,7 +15,7 @@ export const SkillLevelBar: FC<SkillLevelBarProps> = ({ level }) => {
       {
         width: 0,
       },
-      { width: `${(level / 5) * 100}%`, duration: 1, ease: 'expo' }
+      { width: `${((level + 1) / 5) * 100}%`, duration: 1, ease: 'expo' }
     );
   }, []);
 

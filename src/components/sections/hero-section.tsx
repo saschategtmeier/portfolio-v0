@@ -26,13 +26,13 @@ const LearnMorePrompt: FC = () => {
   return (
     <div className="col-span-2 flex justify-center">
       <div className="flex flex-col items-center gap-2">
-        <div className="flex h-16 w-12 justify-center rounded-2xl border-4 border-slate-200">
+        <div className="flex h-16 w-12 justify-center rounded-2xl border-4 border-slate-400 dark:border-slate-200">
           <div
             className="mt-1 h-3 w-3 rounded-full bg-blue-500"
             ref={scrollWheelRef}
           ></div>
         </div>
-        <div className="text-slate-200">scroll to learn more</div>
+        <div>scroll to learn more</div>
       </div>
     </div>
   );

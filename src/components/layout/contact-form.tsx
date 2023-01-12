@@ -110,7 +110,7 @@ export const ContactForm: FC = () => {
       <div className="flex justify-end">
         <button
           type="submit"
-          className={`mt-4 inline-flex justify-center rounded-md bg-blue-500 px-4 py-2 font-medium text-white hover:ring-2 hover:ring-black dark:hover:ring-white ${
+          className={`mt-4 inline-flex justify-center rounded-md bg-blue-500 px-4 py-2 font-medium text-white hover:ring-2 hover:ring-slate-400 dark:hover:ring-slate-200 ${
             !isValid && 'pointer-events-none bg-blue-500/50'
           }`}
           disabled={!isValid}

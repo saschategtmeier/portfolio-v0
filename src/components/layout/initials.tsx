@@ -16,7 +16,7 @@ export const Initials: FC = () => {
       className={`h-9 cursor-pointer rounded border-2 px-2 text-2xl font-bold tracking-wide hover:border-blue-500 ${
         currentPageSection?.section === initialsHash
           ? 'border-blue-500'
-          : 'border-black dark:border-white'
+          : 'border-slate-400 dark:border-slate-200'
       }`}
       smooth
       onClick={() => setIsNavbarOpen(false)}

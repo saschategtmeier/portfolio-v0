@@ -26,7 +26,7 @@
   input[type='text'],
   input[type='email'],
   textarea {
-    @apply rounded-lg border-none bg-slate-200 text-white focus:ring-2 focus:ring-blue-500 dark:text-black;
+    @apply rounded-lg border-none bg-slate-400 text-white focus:ring-2 focus:ring-blue-500 dark:bg-slate-200 dark:text-black;
   }
 
   label {

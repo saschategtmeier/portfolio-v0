@@ -20,7 +20,7 @@ const ContactMeButton: FC = () => {
 
   return (
     <button
-      className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-black dark:hover:ring-white ${ANIMATE_CLASSES.nav.item}`}
+      className={`rounded bg-blue-500 px-2 text-center font-semibold text-white shadow-lg hover:ring-2 hover:ring-slate-400 dark:hover:ring-slate-200 ${ANIMATE_CLASSES.nav.item}`}
       onClick={handleContactMeClick}
     >
       Contact me

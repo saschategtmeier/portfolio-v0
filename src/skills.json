@@ -90,7 +90,7 @@
       {
         "name": "IDEs",
         "level": 4,
-        "tags": ["Visual Studio Code", "Visual Studio", "(Neo)Vim"]
+        "tags": ["(Neo)Vim", "Visual Studio Code", "Visual Studio"]
       },
       {
         "name": "Monorepos",

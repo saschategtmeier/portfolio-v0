@@ -16,9 +16,10 @@ export const AboutMeSection: FC = () => {
             trigger: imageRef.current,
             toggleActions: 'play reverse play reverse',
           },
+          delay: 0.1,
         })
-        .from(imageRef.current, { y: -24 })
-        .from(textContainerRef.current, { y: 24 }, 0);
+        .from(imageRef.current, { y: -96 })
+        .from(textContainerRef.current, { y: 96 }, 0);
     }, textContainerRef);
 
     return () => ctx.revert();
